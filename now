@@ -13,8 +13,8 @@ def what_time(ofset):
 if __name__ == "__main__":
     # 日本の時刻を表示 (UTC+9)
     print(what_time(9))
-    # ワシントンD.Cの時刻を表示 (UTC-5または夏時間の場合はUTC-4)
-    print(what_time(-5)) # または夏時間を考慮してprint(what_time(-4))
-    # ベルリンの時刻を表示 (UTC+1または夏時間の場合はUTC+2)
-    print(what_time(1)) # または夏時間を考慮してprint(what_time(2))
+    # ワシントンD.Cの時刻を表示 
+    print(what_time(-5))
+    # ベルリンの時刻を表示 
+    print(what_time(1))
 
