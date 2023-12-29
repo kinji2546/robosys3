@@ -18,7 +18,7 @@ regex='^[0-9]{4}年[0-9]{2}月[0-9]{2}日 [0-9]{2}時[0-9]{2}分[0-9]{2}秒$'
 #echo "output: $output"
 #echo "regex: $regex"
 
-[[ "${output}" =~ "${regex}" ]] || ng $res
+[[ ${output} =~ ${regex} ]] || ng $res
 
 [ "$res" = 0 ] && echo "テスト成功"
 
