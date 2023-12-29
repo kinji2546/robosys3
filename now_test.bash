@@ -15,12 +15,25 @@ output=$(./now)
 # 日時文字列がYYYY年MM月DD日 HH時MM分SS秒フォーマットに一致するかチェックする
 regex='^[0-9]{4}年[0-9]{2}月[0-9]{2}日 [0-9]{2}時[0-9]{2}分[0-9]{2}秒$'
 
+<<<<<<< HEAD
 #echo "output: $output"
 #echo "regex: $regex"
 
 [[ ${output} =~ ${regex} ]] || ng $res
 
 [ "$res" = 0 ] && echo "テスト成功"
+=======
+# 改行ごとに出力をチェック
+while IFS= read -r line; do
+    if ! [[ $line =~ $regex ]]; then
+        ng 
+        break
+    fi
+done <<< "$output"
+
+# テスト結果に基づいて適切な処理を行う。
+[[ $res -eq 0 ]] && echo "テスト成功" || ng
+>>>>>>> dev
 
 exit $res
 

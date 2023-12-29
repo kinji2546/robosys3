@@ -2,11 +2,19 @@
 #SPDX-FileCopyrightText: 2023 Nozaki
 #SPDX-License-Identifier: BSD-3-Clause 
 
-from datetime import datetime
-
-def what_time():
-    now = datetime.now()
-    return now.strftime("%Y年%m月%d日 %H時%M分%S秒")
+from datetime import datetime, timedelta
+def what_time(ofset):
+    # UTCの現在時刻を取得
+    utc_time = datetime.utcnow()
+    # UTCからのオフセットで別の地域の時刻を計算（変数名をTheir_timeに変更）
+    Their_time = utc_time + timedelta(hours=ofset)
+    return Their_time.strftime("%Y年%m月%d日 %H時%M分%S秒")
 
 if __name__ == "__main__":
-    print(what_time())
+    # 日本の時刻を表示 (UTC+9)
+    print(what_time(9))
+    # ワシントンD.Cの時刻を表示 
+    print(what_time(-5))
+    # ベルリンの時刻を表示 
+    print(what_time(1))
+
