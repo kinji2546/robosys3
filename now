@@ -11,6 +11,7 @@ def what_time(ofset):
     return Their_time.strftime("%Y年%m月%d日 %H時%M分%S秒")
 
 if __name__ == "__main__":
+    print("上から順に東京・ワシントンD.C・ベルリン")
     # 日本の時刻を表示 (UTC+9)
     print(what_time(9))
     # ワシントンD.Cの時刻を表示 
