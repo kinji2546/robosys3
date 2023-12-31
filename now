@@ -8,14 +8,10 @@ def what_time(ofset):
     utc_time = datetime.utcnow()
     # UTCからのオフセットで別の地域の時刻を計算（変数名をTheir_timeに変更）
     Their_time = utc_time + timedelta(hours=ofset)
-    return Their_time.strftime("%Y年%m月%d日 %H時%M分%S秒")
+    return Their_time.strftime('%Y年%m月%d日 %H時%M分%S秒')
 
 if __name__ == "__main__":
-    print("上から順に東京・ワシントンD.C・ベルリン")
-    # 日本の時刻を表示 (UTC+9)
-    print(what_time(9))
-    # ワシントンD.Cの時刻を表示 
-    print(what_time(-5))
-    # ベルリンの時刻を表示 
-    print(what_time(1))
-
+    # 各地の時刻を表示、ここで直接都市の名前を入れます。
+    print("東京: " + what_time(9))         # 日本の時刻 (UTC+9)
+    print("ワシントンD.C.: " + what_time(-5)) # ワシントンD.C.の時刻 (UTC-5)
+    print("ベルリン: " + what_time(1))     # ベルリンの時刻 (UTC+1)
