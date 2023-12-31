@@ -24,6 +24,6 @@ while IFS= read -r line; do
 done <<< "$output"
 
 # テスト結果に基づいて適切な処理を行う。
-[[ $res -eq 0 ]] && echo "テスト成功" || ng
+#[[ $res -eq 0 ]] && echo "テスト成功" || ng
 
 exit $res
