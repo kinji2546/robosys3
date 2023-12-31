@@ -1,5 +1,3 @@
-# robosys3
-ロボットシステム学の課題用リポジトリ.  
 # now コマンド
 [![test](https://github.com/kinji2546/robosys3/actions/workflows/test.yml/badge.svg)](https://github.com/kinji2546/robosys3/actions/workflows/test.yml)  
 3か国の現在の年・月・日・時間・分・秒を出力する.  

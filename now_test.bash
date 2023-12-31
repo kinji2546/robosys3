@@ -1,7 +1,7 @@
 #!/bin/bash
 # SPDX-FileCopyrightText: 2023 Nozaki
 # SPDX-License-Identifier: BSD-3-Clause
-#set -x
+set -x
 ng () {
       echo Test at NG
       res=1
